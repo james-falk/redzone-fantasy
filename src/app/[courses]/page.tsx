@@ -10,14 +10,14 @@ export async function generateStaticParams() {
 
 interface CourseDetailsPageProps {
   params: {
-    courses: string
+    course: string
   }
 }
 
 export default async function CourseDetailsPage({
   params,
 }: CourseDetailsPageProps) {
-  const course = await getOneCourse(params.courses)
+  const course = await getOneCourse(params.course)
 
   if (!course) {
     return <p className="text-center mt-10">Course not found</p>
