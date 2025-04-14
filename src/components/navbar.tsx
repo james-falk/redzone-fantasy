@@ -51,13 +51,13 @@ const Navbar = () => {
             }`}
           >
             {navLinks.map(({ title, link }, index) => (
-              <a
+              <Link
                 key={index}
                 href={link}
                 className="rounded-md px-3 py-2 text-slate-500 transition-colors duration-100 ease-linear hover:bg-gray-700 hover:text-white"
               >
                 {title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
