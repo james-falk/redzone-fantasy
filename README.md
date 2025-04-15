@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Nextory** is a starter template for building directory websites using **Next.js 15** and **Tailwind CSS V4**.
 
-## Getting Started
+![nextjs directory site home page](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Blogs/learn-to-build-directory-website-in-nextjs.png?updatedAt=1739958775946)
 
-First, run the development server:
+If you want to create a directory website with Next.js, this repo will help you a lot.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Modern Stack**: Built with the latest Next.js App Router, Tailwind CSS V4, and Node.js.
+- **Ready-to-use Components**: Uses FlexyUI functional components (or works with other libraries like Shadcn, DaisyUI, Material Tailwind).
+- **Dynamic Content**: Loads content from JSON files using Node.js `fs` module.
+- **Easy to Customize**: Change themes and component styles with Tailwind-based UI libraries.
+- **Complete Homepage**: Includes Navbar, Hero section, Product Listings, FAQ, Newsletter, and Footer.
+- **Clean Project Structure**: Well-organized `components` folder inside `src`.
+- **Open Source**: Free to use with MIT License.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Post Details Page UI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![post details page ui](https://ik.imagekit.io/cpnw7c0xpe/Tailwind%20Components/Blogs/directory-course-details-page-ui.png?updatedAt=1740051949956)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Do you want to learn how to build directory template like this step by step? check out the blog [How to build directory site in Next.js](https://www.flexyui.com/blogs/how-to-build-dynamic-directory-website-in-nextjs)
