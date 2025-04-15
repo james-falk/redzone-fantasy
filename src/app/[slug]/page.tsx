@@ -3,21 +3,34 @@ import Hero from '@/components/hero'
 import Lists from '@/components/lists'
 import { getAllCourses, getOneCourse } from '@/services/courses'
 
-export async function generateStaticParams() {
+interface StaticParams {
+  slug: string
+}
+
+export const dynamicParams = false
+
+export async function generateStaticParams(): Promise<StaticParams[]> {
   const courses = await getAllCourses()
-  return courses.map((course) => ({ course: course.slug }))
+
+  return courses.map((course) => {
+    return {
+      slug: `${course.slug}`,
+    }
+  })
 }
 
-interface CourseDetailsPageProps {
-  params: {
-    course: string
-  }
+interface PageProps {
+  params: Promise<{
+    slug: string
+  }>
 }
 
-export default async function CourseDetailsPage({
-  params,
-}: CourseDetailsPageProps) {
-  const course = await getOneCourse(params.course)
+export default async function CourseDetailsPage(props: PageProps) {
+  const params = await props.params
+
+  const { slug } = params
+
+  const course = await getOneCourse(slug)
 
   if (!course) {
     return <p className="text-center mt-10">Course not found</p>
