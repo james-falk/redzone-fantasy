@@ -57,7 +57,7 @@ export const dataSources: SourceConfig[] = [
     id: 'fantasypros-rss',
     name: 'FantasyPros',
     type: 'article',
-    enabled: false,
+    enabled: true, // Enable for testing refresh functionality
     config: {
       rssUrl: 'https://www.fantasypros.com/rss/news.xml',
       updateInterval: 15,
@@ -77,10 +77,10 @@ export const dataSources: SourceConfig[] = [
     id: 'fantasy-football-today-youtube',
     name: 'Fantasy Football Today',
     type: 'video',
-    enabled: false,
+    enabled: true, // Enable for testing refresh functionality
     config: {
       channelId: 'UCF7Uw9I4e_0Kqgj7rBHEJ0A',
-      maxResults: 10,
+      maxResults: 5,
       updateInterval: 60,
     },
   },
@@ -92,6 +92,30 @@ export const dataSources: SourceConfig[] = [
     config: {
       rssUrl: 'https://feeds.megaphone.fm/fantasyfootballtoday',
       updateInterval: 120,
+    },
+  },
+
+  // Additional YouTube channels for testing refresh functionality
+  {
+    id: 'nfl-official-youtube',
+    name: 'NFL Official',
+    type: 'video',
+    enabled: true,
+    config: {
+      channelId: 'UCDVYQ4Zhbm3S2dlz7P1GBDg', // NFL Official Channel
+      maxResults: 5,
+      updateInterval: 60,
+    },
+  },
+  {
+    id: 'fantasy-pros-youtube',
+    name: 'FantasyPros YouTube',
+    type: 'video',
+    enabled: true,
+    config: {
+      channelId: 'UCF_7YKYJMtqmP_juM1bJ8qQ', // FantasyPros YouTube Channel
+      maxResults: 5,
+      updateInterval: 60,
     },
   },
 ];
