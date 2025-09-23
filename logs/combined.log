@@ -619,3 +619,7 @@
 {"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:37:32.580Z","total":40}
 {"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:37:39.576Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
 {"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:37:39.656Z","total":40}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:37:47.360Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:37:47.441Z","total":40}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:39:54.071Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:39:54.153Z","total":40}

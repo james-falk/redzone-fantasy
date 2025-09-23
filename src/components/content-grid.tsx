@@ -99,7 +99,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
   // Fetch sources for filter dropdown
   useEffect(() => {
     fetchSources();
-  }, []);
+  }, [fetchSources]);
 
   // Fetch content when filters or page changes
   useEffect(() => {
@@ -167,7 +167,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
                 <h3 className="text-sm font-medium text-red-800">Error</h3>
                 <p className="text-sm text-red-700 mt-1">{error}</p>
                 <button
-                  onClick={fetchContent}
+                  onClick={() => fetchContent(false)}
                   className="mt-2 text-sm text-red-800 underline hover:text-red-900"
                 >
                   Try again
