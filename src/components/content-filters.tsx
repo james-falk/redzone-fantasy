@@ -22,7 +22,7 @@ export default function ContentFiltersComponent({
     onFiltersChange({ ...filters, searchQuery: value });
   };
 
-  const handleFilterChange = (key: keyof ContentFilters, value: any) => {
+  const handleFilterChange = (key: keyof ContentFilters, value: string | undefined) => {
     const newFilters = { ...filters, [key]: value };
     onFiltersChange(newFilters);
   };

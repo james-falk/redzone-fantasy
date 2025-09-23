@@ -71,7 +71,7 @@ export const logIngestionError = (
 export const logValidationError = (
   sourceId: string,
   data: unknown,
-  validationError: any
+  validationError: Error
 ) => {
   logger.warn(`Validation failed for item from source: ${sourceId}`, {
     sourceId,

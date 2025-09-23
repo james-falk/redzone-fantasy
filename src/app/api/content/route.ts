@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
     }
 
     const filters: ContentFilters = {
-      type: type as any,
+      type: type as 'rss' | 'youtube' | undefined,
       sourceName,
       dateRange,
       searchQuery,

@@ -32,14 +32,14 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
     if (!initialData || currentPage !== 1 || Object.keys(filters).length > 0) {
       fetchContent();
     }
-  }, [filters, currentPage]);
+  }, [filters, currentPage, fetchContent, initialData]);
 
   const fetchSources = async () => {
     try {
       const response = await fetch('/api/sources?stats=true');
       if (response.ok) {
         const sourcesData = await response.json();
-        const sourceNames = sourcesData.stats?.sourceStats?.map((s: any) => s.sourceName) || [];
+        const sourceNames = sourcesData.stats?.sourceStats?.map((s: { sourceName: string }) => s.sourceName) || [];
         setSources(sourceNames);
       }
     } catch (error) {

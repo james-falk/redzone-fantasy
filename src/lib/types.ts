@@ -118,7 +118,7 @@ export interface SourceConfig {
   name: string;
   type: ContentTypeEnum;
   enabled: boolean;
-  config: Record<string, any>; // Flexible config for different source types
+  config: Record<string, unknown>; // Flexible config for different source types
 }
 
 // Ingestion result types

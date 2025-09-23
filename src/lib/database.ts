@@ -98,7 +98,7 @@ class DatabaseManager {
   ): Promise<{ content: ContentDocument[]; total: number }> {
     try {
       const collection = this.getContentCollection();
-      const query: any = {};
+      const query: Record<string, unknown> = {};
 
       // Apply filters
       if (filters.type) {

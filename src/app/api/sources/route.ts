@@ -13,14 +13,14 @@ export async function GET(request: NextRequest) {
     const configuredSources = getEnabledSources();
     
     // Get module status (this might fail if modules can't initialize, so wrap in try-catch)
-    let moduleStatus: any[] = [];
+    let moduleStatus: Array<{ sourceId: string; enabled: boolean }> = [];
     try {
       moduleStatus = ingestionOrchestrator.getModuleStatus();
     } catch (moduleError) {
       logger.warn('Could not get module status', { error: (moduleError as Error).message });
     }
 
-    let response: any = {
+    const response = {
       sources: configuredSources.map(source => ({
         id: source.id,
         name: source.name,

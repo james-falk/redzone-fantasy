@@ -20,7 +20,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
 
   useEffect(() => {
     fetchContent();
-  }, [sourceName, currentPage]);
+  }, [sourceName, currentPage, fetchContent]);
 
   const fetchContent = async () => {
     setLoading(true);
