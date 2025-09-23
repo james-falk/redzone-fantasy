@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { database } from '@/lib/database';
-import { ContentFilters, ContentResponse } from '@/lib/types';
+import { ContentFilters, ContentResponse, ContentTypeEnum } from '@/lib/types';
 import { logger } from '@/lib/logger';
 
 export async function GET(request: NextRequest) {
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
     }
 
     const filters: ContentFilters = {
-      type: type as 'rss' | 'youtube' | undefined,
+      type: type as ContentTypeEnum | undefined,
       sourceName,
       dateRange,
       searchQuery,
