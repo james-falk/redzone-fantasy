@@ -35,7 +35,7 @@ export const dataSources: SourceConfig[] = [
     enabled: true, // Now enabled with YouTube API key
     config: {
       channelId: 'UCDVYQ4Zhbm3S2dlz7P1GBDg', // NFL official channel for testing
-      maxResults: 5, // Reduced for testing
+      maxResults: 50, // Reduced for testing
       updateInterval: 60,
     },
   },
@@ -80,7 +80,7 @@ export const dataSources: SourceConfig[] = [
     enabled: true, // Enable for testing refresh functionality
     config: {
       channelId: 'UCF7Uw9I4e_0Kqgj7rBHEJ0A',
-      maxResults: 5,
+      maxResults: 50,
       updateInterval: 60,
     },
   },
@@ -103,7 +103,7 @@ export const dataSources: SourceConfig[] = [
     enabled: true,
     config: {
       channelId: 'UCDVYQ4Zhbm3S2dlz7P1GBDg', // NFL Official Channel
-      maxResults: 5,
+      maxResults: 50,
       updateInterval: 60,
     },
   },
@@ -114,7 +114,7 @@ export const dataSources: SourceConfig[] = [
     enabled: true,
     config: {
       channelId: 'UCF_7YKYJMtqmP_juM1bJ8qQ', // FantasyPros YouTube Channel
-      maxResults: 5,
+      maxResults: 50,
       updateInterval: 60,
     },
   },
@@ -125,7 +125,7 @@ export const dataSources: SourceConfig[] = [
     enabled: true,
     config: {
       channelId: 'UCy6AzBHW2_w3lyA_AqUTTmg', // Dynasty Domain YouTube Channel
-      maxResults: 5,
+      maxResults: 50,
       updateInterval: 60,
     },
   },

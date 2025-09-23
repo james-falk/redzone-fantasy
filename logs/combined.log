@@ -714,3 +714,225 @@
 {"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:48:10.250Z","url":"http://localhost:3000/api/sources?stats=true"}
 {"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:48:10.330Z","total":76}
 {"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":7,"timestamp":"2025-09-23T02:48:10.714Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.133Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.273Z","total":76}
+{"level":"info","message":"Initialized ingestion module: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:51:17.261Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:51:17.263Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:51:17.264Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:51:17.264Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:51:17.264Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:51:17.265Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:51:17.265Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: Dynasty Domain","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:51:17.266Z","type":"video"}
+{"level":"info","message":"Initialized 8 ingestion modules","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.266Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.268Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.588Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.663Z","total":76}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.885Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:17.968Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:51:18.051Z","total":76}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:51:18.286Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:18.581Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:51:18.951Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:19.272Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:51:19.641Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:23.065Z","url":"http://localhost:3000/api/content?page=1&limit=100&type=video"}
+{"filters":{"type":"video"},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:51:23.113Z","total":5}
+{"level":"info","message":"Initialized ingestion module: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:51:55.349Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:51:55.353Z","type":"article"}
+{"error":"YOUTUBE_API_KEY environment variable is required","level":"error","message":"Failed to initialize module for source: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:51:55.354Z"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:51:55.354Z","type":"article"}
+{"error":"YOUTUBE_API_KEY environment variable is required","level":"error","message":"Failed to initialize module for source: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:51:55.355Z"}
+{"error":"YOUTUBE_API_KEY environment variable is required","level":"error","message":"Failed to initialize module for source: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:51:55.355Z"}
+{"error":"YOUTUBE_API_KEY environment variable is required","level":"error","message":"Failed to initialize module for source: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:51:55.356Z"}
+{"error":"YOUTUBE_API_KEY environment variable is required","level":"error","message":"Failed to initialize module for source: Dynasty Domain","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:51:55.356Z"}
+{"level":"info","message":"Initialized 3 ingestion modules","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:55.357Z"}
+{"level":"info","message":"Starting content ingestion script","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:55.359Z"}
+{"level":"info","message":"Ingesting from all enabled sources","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:55.360Z"}
+{"level":"info","message":"Starting full ingestion process","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:55.360Z"}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:55.951Z"}
+{"level":"info","message":"Database indexes created successfully","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.325Z"}
+{"level":"info","message":"Starting ingestion for source: espn-fantasy-football","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.325Z"}
+{"level":"info","message":"Starting ingestion for source: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","sourceName":"ESPN Fantasy Football","timestamp":"2025-09-23T02:51:56.326Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.espn.com/espn/rss/nfl/news","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:51:56.326Z"}
+{"feedTitle":"www.espn.com - NFL","level":"info","message":"Found 24 items in RSS feed","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:51:56.443Z"}
+{"level":"info","message":"Saved 24 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.552Z"}
+{"itemsProcessed":24,"itemsSaved":24,"level":"info","message":"Ingestion completed for source: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","sourceName":"ESPN Fantasy Football","timestamp":"2025-09-23T02:51:56.552Z"}
+{"duration":227,"level":"info","message":"Ingestion completed in 227ms","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:51:56.553Z"}
+{"level":"info","message":"Successfully processed 24 items from espn-fantasy-football","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.553Z"}
+{"level":"info","message":"Starting ingestion for source: fantasysp-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.553Z"}
+{"level":"info","message":"Starting ingestion for source: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","sourceName":"FantasySP","timestamp":"2025-09-23T02:51:56.553Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.fantasysp.com/rss/nfl/fantasysp/","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:51:56.554Z"}
+{"feedTitle":"FantasySP / Latest Fantasy Sports Expert Analysis for Fantasy Football, Fantasy Basketball and more","level":"info","message":"Found 15 items in RSS feed","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:51:56.730Z"}
+{"level":"info","message":"Saved 15 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.793Z"}
+{"itemsProcessed":15,"itemsSaved":15,"level":"info","message":"Ingestion completed for source: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","sourceName":"FantasySP","timestamp":"2025-09-23T02:51:56.794Z"}
+{"duration":241,"level":"info","message":"Ingestion completed in 241ms","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:51:56.794Z"}
+{"level":"info","message":"Successfully processed 15 items from fantasysp-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.794Z"}
+{"level":"info","message":"Starting ingestion for source: fantasypros-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:51:56.795Z"}
+{"level":"info","message":"Starting ingestion for source: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","sourceName":"FantasyPros","timestamp":"2025-09-23T02:51:56.795Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.fantasypros.com/rss/news.xml","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:51:56.795Z"}
+{"error":"Failed to fetch RSS feed: Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: A","level":"error","message":"Ingestion failed for source: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","sourceName":"FantasyPros","stack":"IngestionError: Failed to fetch RSS feed: Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: A\n    at RSSIngestionModule.fetchData (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\rss-ingestion.ts:72:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async RSSIngestionModule.ingest (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\base-ingestion.ts:30:28)\n    at async IngestionOrchestrator.ingestAll (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\ingestion-orchestrator.ts:80:24)\n    at async main (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\scripts\\ingest.ts:43:17)","timestamp":"2025-09-23T02:51:57.108Z"}
+{"level":"info","message":"Initialized ingestion module: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:52:14.336Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:52:14.339Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:52:14.339Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:52:14.340Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:52:14.340Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:52:14.340Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:52:14.341Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: Dynasty Domain","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:52:14.341Z","type":"video"}
+{"level":"info","message":"Initialized 8 ingestion modules","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:14.341Z"}
+{"level":"info","message":"Starting content ingestion script","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:14.343Z"}
+{"level":"info","message":"Ingesting from all enabled sources","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:14.343Z"}
+{"level":"info","message":"Starting full ingestion process","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:14.344Z"}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:14.918Z"}
+{"level":"info","message":"Database indexes created successfully","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.292Z"}
+{"level":"info","message":"Starting ingestion for source: espn-fantasy-football","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.292Z"}
+{"level":"info","message":"Starting ingestion for source: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","sourceName":"ESPN Fantasy Football","timestamp":"2025-09-23T02:52:15.293Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.espn.com/espn/rss/nfl/news","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:52:15.293Z"}
+{"feedTitle":"www.espn.com - NFL","level":"info","message":"Found 24 items in RSS feed","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:52:15.434Z"}
+{"level":"info","message":"Saved 24 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.547Z"}
+{"itemsProcessed":24,"itemsSaved":24,"level":"info","message":"Ingestion completed for source: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","sourceName":"ESPN Fantasy Football","timestamp":"2025-09-23T02:52:15.548Z"}
+{"duration":255,"level":"info","message":"Ingestion completed in 255ms","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:52:15.548Z"}
+{"level":"info","message":"Successfully processed 24 items from espn-fantasy-football","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.548Z"}
+{"level":"info","message":"Starting ingestion for source: fantasysp-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.549Z"}
+{"level":"info","message":"Starting ingestion for source: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","sourceName":"FantasySP","timestamp":"2025-09-23T02:52:15.549Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.fantasysp.com/rss/nfl/fantasysp/","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:52:15.550Z"}
+{"feedTitle":"FantasySP / Latest Fantasy Sports Expert Analysis for Fantasy Football, Fantasy Basketball and more","level":"info","message":"Found 15 items in RSS feed","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:52:15.724Z"}
+{"level":"info","message":"Saved 15 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.789Z"}
+{"itemsProcessed":15,"itemsSaved":15,"level":"info","message":"Ingestion completed for source: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","sourceName":"FantasySP","timestamp":"2025-09-23T02:52:15.790Z"}
+{"duration":241,"level":"info","message":"Ingestion completed in 241ms","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:52:15.790Z"}
+{"level":"info","message":"Successfully processed 15 items from fantasysp-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.791Z"}
+{"level":"info","message":"Starting ingestion for source: fantasy-footballers-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:15.791Z"}
+{"level":"info","message":"Starting ingestion for source: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","sourceName":"The Fantasy Footballers","timestamp":"2025-09-23T02:52:15.791Z"}
+{"level":"info","maxResults":5,"message":"Fetching YouTube videos for channel: UCDVYQ4Zhbm3S2dlz7P1GBDg","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:52:15.792Z"}
+{"channelId":"UCDVYQ4Zhbm3S2dlz7P1GBDg","level":"info","message":"Found 5 videos for channel","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:52:16.164Z"}
+{"level":"info","message":"Saved 5 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.213Z"}
+{"itemsProcessed":5,"itemsSaved":5,"level":"info","message":"Ingestion completed for source: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","sourceName":"The Fantasy Footballers","timestamp":"2025-09-23T02:52:16.213Z"}
+{"duration":423,"level":"info","message":"Ingestion completed in 423ms","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:52:16.214Z"}
+{"level":"info","message":"Successfully processed 5 items from fantasy-footballers-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.214Z"}
+{"level":"info","message":"Starting ingestion for source: fantasypros-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.214Z"}
+{"level":"info","message":"Starting ingestion for source: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","sourceName":"FantasyPros","timestamp":"2025-09-23T02:52:16.214Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.fantasypros.com/rss/news.xml","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:52:16.215Z"}
+{"error":"Failed to fetch RSS feed: Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: A","level":"error","message":"Ingestion failed for source: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","sourceName":"FantasyPros","stack":"IngestionError: Failed to fetch RSS feed: Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: A\n    at RSSIngestionModule.fetchData (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\rss-ingestion.ts:72:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async RSSIngestionModule.ingest (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\base-ingestion.ts:30:28)\n    at async IngestionOrchestrator.ingestAll (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\ingestion-orchestrator.ts:80:24)\n    at async main (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\scripts\\ingest.ts:43:17)","timestamp":"2025-09-23T02:52:16.294Z"}
+{"level":"info","message":"Starting ingestion for source: fantasy-football-today-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.294Z"}
+{"level":"info","message":"Starting ingestion for source: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","sourceName":"Fantasy Football Today","timestamp":"2025-09-23T02:52:16.295Z"}
+{"level":"info","maxResults":5,"message":"Fetching YouTube videos for channel: UCF7Uw9I4e_0Kqgj7rBHEJ0A","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:52:16.295Z"}
+{"level":"warn","message":"No videos found for channel: UCF7Uw9I4e_0Kqgj7rBHEJ0A","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:52:16.536Z"}
+{"itemsProcessed":0,"itemsSaved":0,"level":"info","message":"Ingestion completed for source: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","sourceName":"Fantasy Football Today","timestamp":"2025-09-23T02:52:16.537Z"}
+{"duration":242,"level":"info","message":"Ingestion completed in 242ms","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:52:16.537Z"}
+{"level":"info","message":"Starting ingestion for source: nfl-official-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.537Z"}
+{"level":"info","message":"Starting ingestion for source: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","sourceName":"NFL Official","timestamp":"2025-09-23T02:52:16.537Z"}
+{"level":"info","maxResults":5,"message":"Fetching YouTube videos for channel: UCDVYQ4Zhbm3S2dlz7P1GBDg","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:52:16.538Z"}
+{"channelId":"UCDVYQ4Zhbm3S2dlz7P1GBDg","level":"info","message":"Found 5 videos for channel","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:52:16.808Z"}
+{"level":"info","message":"Saved 5 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.866Z"}
+{"itemsProcessed":5,"itemsSaved":5,"level":"info","message":"Ingestion completed for source: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","sourceName":"NFL Official","timestamp":"2025-09-23T02:52:16.866Z"}
+{"duration":329,"level":"info","message":"Ingestion completed in 329ms","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:52:16.866Z"}
+{"level":"info","message":"Successfully processed 5 items from nfl-official-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.866Z"}
+{"level":"info","message":"Starting ingestion for source: fantasy-pros-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:16.866Z"}
+{"level":"info","message":"Starting ingestion for source: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","sourceName":"FantasyPros YouTube","timestamp":"2025-09-23T02:52:16.867Z"}
+{"level":"info","maxResults":5,"message":"Fetching YouTube videos for channel: UCF_7YKYJMtqmP_juM1bJ8qQ","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:52:16.867Z"}
+{"level":"warn","message":"No videos found for channel: UCF_7YKYJMtqmP_juM1bJ8qQ","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:52:17.115Z"}
+{"itemsProcessed":0,"itemsSaved":0,"level":"info","message":"Ingestion completed for source: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","sourceName":"FantasyPros YouTube","timestamp":"2025-09-23T02:52:17.115Z"}
+{"duration":249,"level":"info","message":"Ingestion completed in 249ms","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:52:17.116Z"}
+{"level":"info","message":"Starting ingestion for source: dynasty-domain-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:17.116Z"}
+{"level":"info","message":"Starting ingestion for source: Dynasty Domain","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","sourceName":"Dynasty Domain","timestamp":"2025-09-23T02:52:17.116Z"}
+{"level":"info","maxResults":5,"message":"Fetching YouTube videos for channel: UCy6AzBHW2_w3lyA_AqUTTmg","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:52:17.116Z"}
+{"channelId":"UCy6AzBHW2_w3lyA_AqUTTmg","level":"info","message":"Found 5 videos for channel","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:52:17.427Z"}
+{"level":"info","message":"Saved 5 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:17.481Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:52:45.669Z","url":"http://localhost:3000/api/content?source=Dynasty%20Domain"}
+{"filters":{"sourceName":"Dynasty Domain"},"level":"info","limit":20,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:52:45.722Z","total":5}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:01.391Z","url":"http://localhost:3000/api/sources"}
+{"includeStats":false,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:53:01.391Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:37.380Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:37.394Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:53:37.471Z","total":86}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:37.681Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:53:37.764Z","total":86}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:53:37.914Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:37.967Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:53:38.009Z","total":86}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:38.101Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:53:38.489Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:38.685Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":8,"timestamp":"2025-09-23T02:53:38.777Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:53:43.802Z","url":"http://localhost:3000/api/content?page=1&limit=100&type=video"}
+{"filters":{"type":"video"},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:53:43.853Z","total":15}
+{"level":"info","message":"Starting database wipe process","service":"redzone-fantasy","timestamp":"2025-09-23T02:55:55.504Z"}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:55:56.163Z"}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:55:56.164Z"}
+{"level":"info","message":"Content collection dropped successfully","service":"redzone-fantasy","timestamp":"2025-09-23T02:55:56.216Z"}
+{"level":"info","message":"Database indexes created successfully","service":"redzone-fantasy","timestamp":"2025-09-23T02:55:56.592Z"}
+{"level":"info","message":"Initialized ingestion module: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:56:14.012Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:56:14.015Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:56:14.015Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:56:14.015Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:56:14.016Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:56:14.016Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:56:14.016Z","type":"video"}
+{"level":"info","message":"Initialized ingestion module: Dynasty Domain","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:56:14.016Z","type":"video"}
+{"level":"info","message":"Initialized 8 ingestion modules","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:14.017Z"}
+{"level":"info","message":"Starting content ingestion script","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:14.018Z"}
+{"level":"info","message":"Ingesting from all enabled sources","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:14.018Z"}
+{"level":"info","message":"Starting full ingestion process","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:14.018Z"}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:14.609Z"}
+{"level":"info","message":"Database indexes created successfully","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.010Z"}
+{"level":"info","message":"Starting ingestion for source: espn-fantasy-football","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.011Z"}
+{"level":"info","message":"Starting ingestion for source: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","sourceName":"ESPN Fantasy Football","timestamp":"2025-09-23T02:56:15.011Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.espn.com/espn/rss/nfl/news","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:56:15.012Z"}
+{"feedTitle":"www.espn.com - NFL","level":"info","message":"Found 24 items in RSS feed","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:56:15.144Z"}
+{"level":"info","message":"Saved 24 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.278Z"}
+{"itemsProcessed":24,"itemsSaved":24,"level":"info","message":"Ingestion completed for source: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","sourceName":"ESPN Fantasy Football","timestamp":"2025-09-23T02:56:15.278Z"}
+{"duration":268,"level":"info","message":"Ingestion completed in 268ms","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:56:15.279Z"}
+{"level":"info","message":"Successfully processed 24 items from espn-fantasy-football","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.279Z"}
+{"level":"info","message":"Starting ingestion for source: fantasysp-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.279Z"}
+{"level":"info","message":"Starting ingestion for source: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","sourceName":"FantasySP","timestamp":"2025-09-23T02:56:15.279Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.fantasysp.com/rss/nfl/fantasysp/","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:56:15.280Z"}
+{"feedTitle":"FantasySP / Latest Fantasy Sports Expert Analysis for Fantasy Football, Fantasy Basketball and more","level":"info","message":"Found 15 items in RSS feed","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:56:15.438Z"}
+{"level":"info","message":"Saved 15 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.498Z"}
+{"itemsProcessed":15,"itemsSaved":15,"level":"info","message":"Ingestion completed for source: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","sourceName":"FantasySP","timestamp":"2025-09-23T02:56:15.498Z"}
+{"duration":220,"level":"info","message":"Ingestion completed in 220ms","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:56:15.499Z"}
+{"level":"info","message":"Successfully processed 15 items from fantasysp-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.499Z"}
+{"level":"info","message":"Starting ingestion for source: fantasy-footballers-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.499Z"}
+{"level":"info","message":"Starting ingestion for source: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","sourceName":"The Fantasy Footballers","timestamp":"2025-09-23T02:56:15.499Z"}
+{"level":"info","maxResults":50,"message":"Fetching YouTube videos for channel: UCDVYQ4Zhbm3S2dlz7P1GBDg","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:56:15.499Z"}
+{"channelId":"UCDVYQ4Zhbm3S2dlz7P1GBDg","level":"info","message":"Found 50 videos for channel","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:56:15.892Z"}
+{"level":"info","message":"Saved 50 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.976Z"}
+{"itemsProcessed":50,"itemsSaved":50,"level":"info","message":"Ingestion completed for source: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","sourceName":"The Fantasy Footballers","timestamp":"2025-09-23T02:56:15.977Z"}
+{"duration":478,"level":"info","message":"Ingestion completed in 478ms","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:56:15.977Z"}
+{"level":"info","message":"Successfully processed 50 items from fantasy-footballers-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.977Z"}
+{"level":"info","message":"Starting ingestion for source: fantasypros-rss","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:15.977Z"}
+{"level":"info","message":"Starting ingestion for source: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","sourceName":"FantasyPros","timestamp":"2025-09-23T02:56:15.977Z"}
+{"level":"info","message":"Fetching RSS feed: https://www.fantasypros.com/rss/news.xml","service":"redzone-fantasy","sourceId":"fantasypros-rss","timestamp":"2025-09-23T02:56:15.978Z"}
+{"error":"Failed to fetch RSS feed: Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: A","level":"error","message":"Ingestion failed for source: FantasyPros","service":"redzone-fantasy","sourceId":"fantasypros-rss","sourceName":"FantasyPros","stack":"IngestionError: Failed to fetch RSS feed: Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: A\n    at RSSIngestionModule.fetchData (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\rss-ingestion.ts:72:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async RSSIngestionModule.ingest (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\base-ingestion.ts:30:28)\n    at async IngestionOrchestrator.ingestAll (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\modules\\ingestion-orchestrator.ts:80:24)\n    at async main (C:\\Users\\james\\OneDrive - Kerry Brothers Truck Repair\\Documents\\Personal\\Cursor\\nextjs-directory-site-starter\\scripts\\ingest.ts:43:17)","timestamp":"2025-09-23T02:56:16.053Z"}
+{"level":"info","message":"Starting ingestion for source: fantasy-football-today-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:16.054Z"}
+{"level":"info","message":"Starting ingestion for source: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","sourceName":"Fantasy Football Today","timestamp":"2025-09-23T02:56:16.054Z"}
+{"level":"info","maxResults":50,"message":"Fetching YouTube videos for channel: UCF7Uw9I4e_0Kqgj7rBHEJ0A","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:56:16.054Z"}
+{"level":"warn","message":"No videos found for channel: UCF7Uw9I4e_0Kqgj7rBHEJ0A","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:56:16.273Z"}
+{"itemsProcessed":0,"itemsSaved":0,"level":"info","message":"Ingestion completed for source: Fantasy Football Today","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","sourceName":"Fantasy Football Today","timestamp":"2025-09-23T02:56:16.273Z"}
+{"duration":219,"level":"info","message":"Ingestion completed in 219ms","service":"redzone-fantasy","sourceId":"fantasy-football-today-youtube","timestamp":"2025-09-23T02:56:16.273Z"}
+{"level":"info","message":"Starting ingestion for source: nfl-official-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:16.274Z"}
+{"level":"info","message":"Starting ingestion for source: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","sourceName":"NFL Official","timestamp":"2025-09-23T02:56:16.274Z"}
+{"level":"info","maxResults":50,"message":"Fetching YouTube videos for channel: UCDVYQ4Zhbm3S2dlz7P1GBDg","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:56:16.274Z"}
+{"channelId":"UCDVYQ4Zhbm3S2dlz7P1GBDg","level":"info","message":"Found 50 videos for channel","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:56:16.551Z"}
+{"level":"info","message":"Saved 50 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:16.628Z"}
+{"itemsProcessed":50,"itemsSaved":50,"level":"info","message":"Ingestion completed for source: NFL Official","service":"redzone-fantasy","sourceId":"nfl-official-youtube","sourceName":"NFL Official","timestamp":"2025-09-23T02:56:16.629Z"}
+{"duration":355,"level":"info","message":"Ingestion completed in 355ms","service":"redzone-fantasy","sourceId":"nfl-official-youtube","timestamp":"2025-09-23T02:56:16.629Z"}
+{"level":"info","message":"Successfully processed 50 items from nfl-official-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:16.629Z"}
+{"level":"info","message":"Starting ingestion for source: fantasy-pros-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:16.629Z"}
+{"level":"info","message":"Starting ingestion for source: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","sourceName":"FantasyPros YouTube","timestamp":"2025-09-23T02:56:16.629Z"}
+{"level":"info","maxResults":50,"message":"Fetching YouTube videos for channel: UCF_7YKYJMtqmP_juM1bJ8qQ","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:56:16.629Z"}
+{"level":"warn","message":"No videos found for channel: UCF_7YKYJMtqmP_juM1bJ8qQ","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:56:16.844Z"}
+{"itemsProcessed":0,"itemsSaved":0,"level":"info","message":"Ingestion completed for source: FantasyPros YouTube","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","sourceName":"FantasyPros YouTube","timestamp":"2025-09-23T02:56:16.845Z"}
+{"duration":216,"level":"info","message":"Ingestion completed in 216ms","service":"redzone-fantasy","sourceId":"fantasy-pros-youtube","timestamp":"2025-09-23T02:56:16.845Z"}
+{"level":"info","message":"Starting ingestion for source: dynasty-domain-youtube","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:16.845Z"}
+{"level":"info","message":"Starting ingestion for source: Dynasty Domain","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","sourceName":"Dynasty Domain","timestamp":"2025-09-23T02:56:16.845Z"}
+{"level":"info","maxResults":50,"message":"Fetching YouTube videos for channel: UCy6AzBHW2_w3lyA_AqUTTmg","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:56:16.846Z"}
+{"channelId":"UCy6AzBHW2_w3lyA_AqUTTmg","level":"info","message":"Found 50 videos for channel","service":"redzone-fantasy","sourceId":"dynasty-domain-youtube","timestamp":"2025-09-23T02:56:17.168Z"}
+{"level":"info","message":"Saved 50 content items to database","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:17.250Z"}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:30.186Z","url":"http://localhost:3001/api/content?limit=1"}
+{"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:30.765Z"}
+{"filters":{},"level":"info","limit":1,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:56:31.089Z","total":140}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:36.274Z","url":"http://localhost:3001/api/content?limit=200"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:56:36.367Z","total":140}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:56:41.894Z","url":"http://localhost:3001/api/content?source=Dynasty%20Domain&limit=100"}
+{"filters":{"sourceName":"Dynasty Domain"},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:56:41.969Z","total":50}
