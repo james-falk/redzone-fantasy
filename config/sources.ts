@@ -118,6 +118,17 @@ export const dataSources: SourceConfig[] = [
       updateInterval: 60,
     },
   },
+  {
+    id: 'dynasty-domain-youtube',
+    name: 'Dynasty Domain',
+    type: 'video',
+    enabled: true,
+    config: {
+      channelId: 'UCy6AzBHW2_w3lyA_AqUTTmg', // Dynasty Domain YouTube Channel
+      maxResults: 5,
+      updateInterval: 60,
+    },
+  },
 ];
 
 // Helper functions for source management

@@ -111,10 +111,10 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
   // Set up automatic background refresh
   useEffect(() => {
     // Set up interval for background refresh every 2 hours (7200000ms)
-    // const REFRESH_INTERVAL = 2 * 60 * 60 * 1000; // 2 hours
+    const REFRESH_INTERVAL = 2 * 60 * 60 * 1000; // 2 hours
     
-    // For testing purposes, use a shorter interval to see refresh in action:
-    const REFRESH_INTERVAL = 30 * 1000; // 30 seconds (for testing only)
+    // For testing purposes, you can temporarily use a shorter interval:
+    // const REFRESH_INTERVAL = 30 * 1000; // 30 seconds (for testing only)
     
     console.log('🔄 Background refresh system initialized');
     console.log(`⏰ Refresh interval set to: ${REFRESH_INTERVAL / 1000 / 60} minutes (${REFRESH_INTERVAL / 1000 / 60 / 60} hours)`);
