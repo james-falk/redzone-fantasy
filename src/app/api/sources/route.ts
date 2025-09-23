@@ -20,7 +20,19 @@ export async function GET(request: NextRequest) {
       logger.warn('Could not get module status', { error: (moduleError as Error).message });
     }
 
-    const response = {
+    const response: {
+      sources: Array<{
+        id: string;
+        name: string;
+        type: any;
+        enabled: boolean;
+        moduleLoaded: boolean;
+      }>;
+      stats?: {
+        totalSources: number;
+        sourceStats: Array<{ sourceName: string; count: number }>;
+      };
+    } = {
       sources: configuredSources.map(source => ({
         id: source.id,
         name: source.name,
