@@ -1,3 +1,10 @@
 {
-  "ignoreCommand": "if [ \"$VERCEL_ENV\" = \"production\" ] && [ \"$FORCE_DEPLOY\" != \"true\" ]; then exit 0; else exit 1; fi"
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  },
+  "github": {
+    "autoJobCancelation": true
+  }
 }
