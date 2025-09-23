@@ -565,3 +565,19 @@
 {"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:05:03.201Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
 {"level":"info","message":"Connected to MongoDB","service":"redzone-fantasy","timestamp":"2025-09-23T02:05:03.966Z"}
 {"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:05:04.290Z","total":40}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:45.746Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"level":"info","message":"Initialized ingestion module: ESPN Fantasy Football","service":"redzone-fantasy","sourceId":"espn-fantasy-football","timestamp":"2025-09-23T02:06:45.861Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: FantasySP","service":"redzone-fantasy","sourceId":"fantasysp-rss","timestamp":"2025-09-23T02:06:45.862Z","type":"article"}
+{"level":"info","message":"Initialized ingestion module: The Fantasy Footballers","service":"redzone-fantasy","sourceId":"fantasy-footballers-youtube","timestamp":"2025-09-23T02:06:45.862Z","type":"video"}
+{"level":"info","message":"Initialized 3 ingestion modules","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:45.863Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:45.864Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:06:45.867Z","total":40}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:46.134Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:06:46.229Z","total":40}
+{"hasMongoUri":true,"level":"info","message":"Content API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:46.541Z","url":"http://localhost:3000/api/content?page=1&limit=100"}
+{"filters":{},"level":"info","limit":50,"message":"Content API request processed","page":1,"service":"redzone-fantasy","timestamp":"2025-09-23T02:06:46.593Z","total":40}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":3,"timestamp":"2025-09-23T02:06:46.647Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:47.082Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":3,"timestamp":"2025-09-23T02:06:47.471Z"}
+{"hasMongoUri":true,"level":"info","message":"Sources API request started","mongoUri":"SET","service":"redzone-fantasy","timestamp":"2025-09-23T02:06:47.784Z","url":"http://localhost:3000/api/sources?stats=true"}
+{"includeStats":true,"level":"info","message":"Sources API request processed","service":"redzone-fantasy","sourceCount":3,"timestamp":"2025-09-23T02:06:47.882Z"}
