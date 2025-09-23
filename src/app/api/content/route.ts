@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
     };
 
     // Check if database is available
-    if (!process.env.MONGODB_URI) {
+    if (!process.env.MONGODB_URI || process.env.MONGODB_URI === 'mongodb://localhost:27017') {
       // Return empty response when no database is configured
       const response: ContentResponse = {
         content: [],
@@ -52,7 +52,23 @@ export async function GET(request: NextRequest) {
     }
 
     // Connect to database
-    await database.connect();
+    try {
+      await database.connect();
+    } catch (dbError) {
+      logger.error('Database connection failed', { error: (dbError as Error).message });
+      // Return empty response when database connection fails
+      const response: ContentResponse = {
+        content: [],
+        pagination: {
+          page,
+          limit,
+          total: 0,
+          totalPages: 0,
+        },
+        filters,
+      };
+      return NextResponse.json(response);
+    }
 
     // Fetch content
     const { content, total } = await database.getContent(filters, page, limit);
