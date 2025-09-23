@@ -22,7 +22,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
   const [filters, setFilters] = useState<ContentFilters>({});
 
 
-  const fetchSources = async () => {
+  const fetchSources = useCallback(async () => {
     try {
       const response = await fetch('/api/sources?stats=true');
       if (response.ok) {
@@ -33,7 +33,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
     } catch (error) {
       console.error('Error fetching sources:', error);
     }
-  };
+  }, []);
 
   const fetchContent = useCallback(async () => {
     setLoading(true);
