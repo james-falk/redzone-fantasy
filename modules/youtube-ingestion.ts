@@ -86,11 +86,11 @@ export class YouTubeIngestionModule extends BaseIngestionModule {
         channelId,
       });
 
-      const contentItems: ContentCard[] = videos.map(video => {
+      const contentItems = videos.map(video => {
         return this.transformYouTubeVideo(video);
-      });
+      }).filter((item): item is ContentCard => item !== null);
 
-      return contentItems.filter(item => item !== null) as ContentCard[];
+      return contentItems;
     } catch (error) {
       throw new IngestionError(
         `Failed to fetch YouTube videos: ${(error as Error).message}`,
