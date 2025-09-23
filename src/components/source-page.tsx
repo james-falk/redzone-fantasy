@@ -18,10 +18,6 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
-    fetchContent();
-  }, [sourceName, currentPage, fetchContent]);
-
   const fetchContent = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -48,6 +44,10 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
       setLoading(false);
     }
   }, [sourceName, currentPage]);
+
+  useEffect(() => {
+    fetchContent();
+  }, [sourceName, currentPage, fetchContent]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
