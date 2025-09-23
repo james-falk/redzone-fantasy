@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
       })),
     };
 
-    if (includeStats && process.env.MONGODB_URI && process.env.MONGODB_URI !== 'mongodb://localhost:27017') {
+    if (includeStats && process.env.MONGODB_URI) {
       try {
         // Connect to database to get actual source names and counts
         await database.connect();

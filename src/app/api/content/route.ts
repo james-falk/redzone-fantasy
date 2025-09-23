@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
     };
 
     // Check if database is available
-    if (!process.env.MONGODB_URI || process.env.MONGODB_URI === 'mongodb://localhost:27017') {
+    if (!process.env.MONGODB_URI) {
       // Return empty response when no database is configured
       const response: ContentResponse = {
         content: [],
