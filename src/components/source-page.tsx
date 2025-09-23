@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ContentCard, ContentResponse } from '@/lib/types';
 import Header from './header';
 import ContentCardComponent from './content-card';
@@ -22,7 +22,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
     fetchContent();
   }, [sourceName, currentPage, fetchContent]);
 
-  const fetchContent = async () => {
+  const fetchContent = useCallback(async () => {
     setLoading(true);
     setError(null);
 
@@ -47,7 +47,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [sourceName, currentPage]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);

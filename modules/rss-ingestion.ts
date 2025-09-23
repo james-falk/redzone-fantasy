@@ -44,7 +44,11 @@ export class RSSIngestionModule extends BaseIngestionModule {
 
   protected async fetchData(): Promise<ContentCard[]> {
     try {
-      const rssUrl = this.sourceConfig.config.rssUrl;
+      const rssUrl = this.sourceConfig.config.rssUrl as string;
+      if (!rssUrl || typeof rssUrl !== 'string') {
+        throw new Error('RSS URL is required and must be a string');
+      }
+      
       logger.info(`Fetching RSS feed: ${rssUrl}`, { sourceId: this.sourceConfig.id });
 
       const feed = await this.parser.parseURL(rssUrl);

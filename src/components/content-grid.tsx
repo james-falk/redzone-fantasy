@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ContentCard, ContentResponse, ContentFilters } from '@/lib/types';
 import Header from './header';
 import HeroSection from './hero-section';
@@ -47,7 +47,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
     }
   };
 
-  const fetchContent = async () => {
+  const fetchContent = useCallback(async () => {
     setLoading(true);
     setError(null);
 
@@ -82,7 +82,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [currentPage, filters]);
 
   const handleFiltersChange = (newFilters: ContentFilters) => {
     setFilters(newFilters);
