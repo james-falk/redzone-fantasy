@@ -20,7 +20,7 @@ const quicksand = Quicksand({
 
 export const metadata: Metadata = {
   title: 'Redzone Fantasy - Fantasy Football News & Analysis',
-  description: 'Your ultimate destination for fantasy football news, videos, and podcasts. Stay updated with the latest content from top fantasy football sources.',
+  description: 'Your ultimate destination for fantasy football news, videos, and podcasts. Stay updated with the latest content from top fantasy football sources. Production ready!',
 }
 
 export default function RootLayout({
