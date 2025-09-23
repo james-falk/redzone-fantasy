@@ -7,6 +7,12 @@ import { ContentTypeEnum } from '@/lib/types';
 
 export async function GET(request: NextRequest) {
   try {
+    logger.info('Sources API request started', { 
+      url: request.url,
+      hasMongoUri: !!process.env.MONGODB_URI,
+      mongoUri: process.env.MONGODB_URI ? 'SET' : 'NOT_SET'
+    });
+    
     const { searchParams } = new URL(request.url);
     const includeStats = searchParams.get('stats') === 'true';
 

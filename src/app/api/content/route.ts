@@ -5,6 +5,12 @@ import { logger } from '@/lib/logger';
 
 export async function GET(request: NextRequest) {
   try {
+    logger.info('Content API request started', { 
+      url: request.url,
+      hasMongoUri: !!process.env.MONGODB_URI,
+      mongoUri: process.env.MONGODB_URI ? 'SET' : 'NOT_SET'
+    });
+    
     const { searchParams } = new URL(request.url);
     
     // Parse query parameters
@@ -93,7 +99,12 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(response);
   } catch (error) {
-    logger.error('Content API error', { error: (error as Error).message });
+    logger.error('Content API error', { 
+      error: (error as Error).message,
+      stack: (error as Error).stack,
+      hasMongoUri: !!process.env.MONGODB_URI,
+      mongoDbName: process.env.MONGODB_DB_NAME
+    });
     
     // Return empty response instead of error to show layout
     const response: ContentResponse = {
