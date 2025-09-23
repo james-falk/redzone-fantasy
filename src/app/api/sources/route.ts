@@ -3,6 +3,7 @@ import { database } from '@/lib/database';
 import { getEnabledSources, dataSources } from '../../../../config/sources';
 import { ingestionOrchestrator } from '../../../../modules/ingestion-orchestrator';
 import { logger } from '@/lib/logger';
+import { ContentTypeEnum } from '@/lib/types';
 
 export async function GET(request: NextRequest) {
   try {
@@ -24,7 +25,7 @@ export async function GET(request: NextRequest) {
       sources: Array<{
         id: string;
         name: string;
-        type: any;
+        type: ContentTypeEnum;
         enabled: boolean;
         moduleLoaded: boolean;
       }>;
