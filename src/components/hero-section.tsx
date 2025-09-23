@@ -10,7 +10,6 @@ export default function HeroSection() {
         <p className="text-xl md:text-2xl hero-description mb-8 max-w-4xl mx-auto">
           Your ultimate destination for fantasy football content, analysis, and insights. 
           Discover the latest videos, articles, and expert analysis to dominate your fantasy leagues!
-          <span className="block text-sm text-yellow-400 mt-4 font-semibold">🚀 Preview Deployment Test - Feature Branch</span>
         </p>
         
         <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors transform hover:scale-105">
