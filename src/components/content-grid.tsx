@@ -22,18 +22,6 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
   const [filters, setFilters] = useState<ContentFilters>({});
 
 
-  // Fetch sources for filter dropdown
-  useEffect(() => {
-    fetchSources();
-  }, []);
-
-  // Fetch content when filters or page changes
-  useEffect(() => {
-    if (!initialData || currentPage !== 1 || Object.keys(filters).length > 0) {
-      fetchContent();
-    }
-  }, [filters, currentPage, fetchContent, initialData]);
-
   const fetchSources = async () => {
     try {
       const response = await fetch('/api/sources?stats=true');
@@ -83,6 +71,18 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
       setLoading(false);
     }
   }, [currentPage, filters]);
+
+  // Fetch sources for filter dropdown
+  useEffect(() => {
+    fetchSources();
+  }, []);
+
+  // Fetch content when filters or page changes
+  useEffect(() => {
+    if (!initialData || currentPage !== 1 || Object.keys(filters).length > 0) {
+      fetchContent();
+    }
+  }, [filters, currentPage, fetchContent, initialData]);
 
   const handleFiltersChange = (newFilters: ContentFilters) => {
     setFilters(newFilters);
