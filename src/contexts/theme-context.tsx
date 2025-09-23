@@ -32,17 +32,27 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (mounted) {
       const root = document.documentElement;
+      console.log('Updating theme classes, theme:', theme);
+      console.log('Root element before:', root.className);
+      
       if (theme === 'dark') {
         root.classList.add('dark');
       } else {
         root.classList.remove('dark');
       }
+      
+      console.log('Root element after:', root.className);
       localStorage.setItem('theme', theme);
     }
   }, [theme, mounted]);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    console.log('Toggle theme called, current theme:', theme);
+    setTheme(prev => {
+      const newTheme = prev === 'light' ? 'dark' : 'light';
+      console.log('Switching from', prev, 'to', newTheme);
+      return newTheme;
+    });
   };
 
   // Prevent hydration mismatch

@@ -57,18 +57,18 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen source-page-bg">
         <Header />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="bg-red-50 border border-red-200 rounded-md p-4">
+          <div className="error-container border rounded-md p-4">
             <div className="flex">
               <AlertCircle className="h-5 w-5 text-red-400" />
               <div className="ml-3">
-                <h3 className="text-sm font-medium text-red-800">Error</h3>
-                <p className="text-sm text-red-700 mt-1">{error}</p>
+                <h3 className="text-sm font-medium error-title">Error</h3>
+                <p className="text-sm error-text mt-1">{error}</p>
                 <button
                   onClick={fetchContent}
-                  className="mt-2 text-sm text-red-800 underline hover:text-red-900"
+                  className="mt-2 text-sm error-text underline hover:opacity-80"
                 >
                   Try again
                 </button>
@@ -81,16 +81,16 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen source-page-bg">
       <Header />
       
       {/* Source Header */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="source-header border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center mb-4">
             <Link 
               href="/"
-              className="inline-flex items-center text-red-600 hover:text-red-800 transition-colors mr-4"
+              className="inline-flex items-center source-back-link mr-4"
             >
               <ArrowLeft className="w-4 h-4 mr-1" />
               Back to Home
@@ -99,12 +99,12 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
           
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">{sourceName}</h1>
-              <p className="text-gray-600">
+              <h1 className="text-4xl font-bold source-title mb-2">{sourceName}</h1>
+              <p className="source-description">
                 Fantasy football content and analysis from {sourceName}
               </p>
               {data && (
-                <p className="text-sm text-gray-500 mt-2">
+                <p className="text-sm source-meta mt-2">
                   {data.pagination.total} articles and videos available
                 </p>
               )}
@@ -120,7 +120,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
         {loading && (
           <div className="flex justify-center items-center py-12">
             <div className="w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
-            <span className="ml-2 text-gray-600">Loading content...</span>
+            <span className="ml-2 loading-text">Loading content...</span>
           </div>
         )}
 
@@ -131,7 +131,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
               <>
                 {/* Results Info */}
                 <div className="flex items-center justify-between mb-6">
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm content-text">
                     Showing {data.content.length} of {data.pagination.total} items
                   </p>
                 </div>
@@ -144,8 +144,8 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
               </>
             ) : (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No content found from {sourceName}.</p>
-                <p className="text-gray-400 text-sm mt-2">
+                <p className="no-content-text text-lg">No content found from {sourceName}.</p>
+                <p className="no-content-subtext text-sm mt-2">
                   Content may not have been ingested yet or the source may be temporarily unavailable.
                 </p>
               </div>
@@ -157,7 +157,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
                 <button
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-4 py-2 border rounded-md text-sm font-medium pagination-button"
                 >
                   <ChevronLeft className="w-4 h-4 mr-1" />
                   Previous
@@ -174,8 +174,8 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
                         onClick={() => handlePageChange(page)}
                         className={`px-3 py-2 border rounded-md text-sm font-medium ${
                           page === currentPage
-                            ? 'bg-red-600 text-white border-red-600'
-                            : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                            ? 'pagination-button-active'
+                            : 'pagination-button'
                         }`}
                       >
                         {page}
@@ -187,7 +187,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
                 <button
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === data.pagination.totalPages}
-                  className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-4 py-2 border rounded-md text-sm font-medium pagination-button"
                 >
                   Next
                   <ChevronRight className="w-4 h-4 ml-1" />
@@ -197,7 +197,7 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
 
             {/* Page Info */}
             {data.pagination.totalPages > 1 && (
-              <div className="text-center mt-4 text-sm text-gray-500">
+              <div className="text-center mt-4 text-sm source-meta">
                 Page {currentPage} of {data.pagination.totalPages} • Showing {data.content.length} of {data.pagination.total} total items
               </div>
             )}

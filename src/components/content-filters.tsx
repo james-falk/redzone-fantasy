@@ -41,7 +41,7 @@ export default function ContentFiltersComponent({
     <div className="mb-8">
       {/* Filters Header */}
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold text-gray-900">Filters</h2>
+        <h2 className="text-2xl font-bold filter-title">Filters</h2>
         {hasActiveFilters && (
           <button
             onClick={clearFilters}
@@ -59,7 +59,7 @@ export default function ContentFiltersComponent({
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             !filters.type
               ? 'bg-red-600 text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'filter-button'
           }`}
         >
           All
@@ -70,7 +70,7 @@ export default function ContentFiltersComponent({
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             filters.type === 'video'
               ? 'bg-red-600 text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'filter-button'
           }`}
         >
           Videos
@@ -81,7 +81,7 @@ export default function ContentFiltersComponent({
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             filters.type === 'article'
               ? 'bg-red-600 text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'filter-button'
           }`}
         >
           Articles
@@ -92,7 +92,7 @@ export default function ContentFiltersComponent({
           className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             filters.type === 'podcast'
               ? 'bg-red-600 text-white'
-              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              : 'filter-button'
           }`}
         >
           Podcasts
@@ -101,18 +101,18 @@ export default function ContentFiltersComponent({
 
       {/* Search Bar */}
       <div className="relative mb-6">
-        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 search-icon w-5 h-5" />
         <input
           type="text"
           placeholder="Search content..."
           value={searchQuery}
           onChange={(e) => handleSearchChange(e.target.value)}
-          className="w-full pl-12 pr-10 py-3 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:border-transparent"
+          className="filter-input w-full pl-12 pr-10 py-3 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:border-transparent"
         />
         {searchQuery && (
           <button
             onClick={() => handleSearchChange('')}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 search-icon hover:text-gray-600"
           >
             <X className="w-5 h-5" />
           </button>
@@ -125,7 +125,7 @@ export default function ContentFiltersComponent({
           <select
             value={filters.sourceName || ''}
             onChange={(e) => handleFilterChange('sourceName', e.target.value || undefined)}
-            className="w-full md:w-64 border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-red-500 focus:border-transparent"
+            className="filter-select w-full md:w-64 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-red-500 focus:border-transparent"
           >
             <option value="">All Sources</option>
             {sources.map((source) => (

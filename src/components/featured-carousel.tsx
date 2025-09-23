@@ -91,7 +91,7 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
   const imageUrl = getBestImage(currentArticle.thumbnailUrl, currentArticle.sourceName);
 
   return (
-    <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg overflow-hidden">
+    <div className="relative featured-carousel rounded-lg overflow-hidden">
       {/* Main Featured Article */}
       <div className="relative h-96 md:h-[500px]">
         {/* Background Image */}
@@ -103,7 +103,7 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
             className="object-cover opacity-30"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+          <div className="absolute inset-0 featured-overlay"></div>
         </div>
 
         {/* Content Overlay */}
@@ -115,7 +115,7 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
               </span>
               <Link 
                 href={`/sources/${sourceNameToSlug(currentArticle.sourceName)}`}
-                className="inline-flex items-center px-3 py-1 bg-white/20 hover:bg-white/30 text-white rounded-full text-sm font-medium transition-colors border border-white/30"
+                className="featured-source inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border"
               >
                 {getSimplifiedSourceName(currentArticle.sourceName)}
               </Link>
@@ -127,18 +127,18 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
               rel="noopener noreferrer"
               className="block group"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
+              <h2 className="text-3xl md:text-4xl font-bold featured-title mb-4 transition-colors">
                 {currentArticle.title}
               </h2>
             </a>
 
             {currentArticle.description && (
-              <p className="text-gray-300 text-lg mb-4 line-clamp-2">
+              <p className="featured-description text-lg mb-4 line-clamp-2">
                 {currentArticle.description}
               </p>
             )}
 
-            <div className="flex items-center text-gray-400 text-sm">
+            <div className="flex items-center featured-meta text-sm">
               <span>{formatDate(currentArticle.publishedAt)}</span>
               {currentArticle.author && (
                 <>
@@ -153,7 +153,7 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-2 featured-nav-button rounded-full"
           aria-label="Previous article"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -161,7 +161,7 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-2 featured-nav-button rounded-full"
           aria-label="Next article"
         >
           <ChevronRight className="w-6 h-6" />
@@ -185,7 +185,7 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
       </div>
 
       {/* Thumbnail Strip */}
-      <div className="bg-gray-900/90 p-4">
+      <div className="featured-thumbnail-strip p-4">
         <div className="flex space-x-4 overflow-x-auto">
           {featuredContent.map((article, index) => {
             const thumbImageUrl = getBestImage(article.thumbnailUrl, article.sourceName);

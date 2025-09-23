@@ -99,7 +99,7 @@ export default function ContentCardComponent({ content, featured = false }: Cont
 
   if (featured) {
     return (
-      <div className="bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-lg transition-all duration-200 overflow-hidden group">
+      <div className="content-card rounded-lg overflow-hidden group">
         {/* Thumbnail */}
         <a 
           href={content.url} 
@@ -133,21 +133,21 @@ export default function ContentCardComponent({ content, featured = false }: Cont
             rel="noopener noreferrer"
             className="block"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
+            <h3 className="text-lg font-bold content-card-title mb-2 line-clamp-2 transition-colors">
               {content.title}
             </h3>
           </a>
           
           {content.description && (
-            <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+            <p className="content-card-text text-sm mb-3 line-clamp-2">
               {content.description}
             </p>
           )}
 
-          <div className="flex items-center justify-between text-sm text-gray-500">
+          <div className="flex items-center justify-between text-sm content-card-meta">
             <Link 
               href={`/sources/${sourceNameToSlug(content.sourceName)}`}
-              className="inline-flex items-center px-3 py-1 bg-gray-100 hover:bg-red-100 text-gray-700 hover:text-red-700 rounded-full text-xs font-medium transition-colors border border-gray-200 hover:border-red-300"
+              className="content-card-source inline-flex items-center px-3 py-1 rounded-full text-xs font-medium transition-colors"
             >
               {getSimplifiedSourceName(content.sourceName)}
             </Link>
@@ -159,7 +159,7 @@ export default function ContentCardComponent({ content, featured = false }: Cont
   }
 
   return (
-    <div className="bg-white border border-gray-200 hover:border-red-300 hover:shadow-md transition-all duration-200 group">
+    <div className="content-card transition-all duration-200 group">
       <div className="p-4">
         {/* Header with type badge */}
         <div className="flex items-center justify-between mb-3">
@@ -186,19 +186,19 @@ export default function ContentCardComponent({ content, featured = false }: Cont
         </a>
 
         {/* Content metadata */}
-        <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+        <div className="flex items-center justify-between text-xs content-card-meta mb-3">
           <div>
             {getTypeLabel(content.type)} • {formatDate(content.publishedAt)}
           </div>
           <Link 
             href={`/sources/${sourceNameToSlug(content.sourceName)}`}
-            className="inline-flex items-center px-2 py-1 bg-gray-100 hover:bg-red-100 text-gray-700 hover:text-red-700 rounded-full text-xs font-medium transition-colors border border-gray-200 hover:border-red-300"
+            className="content-card-source inline-flex items-center px-2 py-1 rounded-full text-xs font-medium transition-colors"
           >
             {getSimplifiedSourceName(content.sourceName)}
           </Link>
         </div>
 
-        <div className="text-xs text-gray-500 mb-3">
+        <div className="text-xs content-card-meta mb-3">
           By {content.author || 'Staff Writer'}
         </div>
 
@@ -209,14 +209,14 @@ export default function ContentCardComponent({ content, featured = false }: Cont
           rel="noopener noreferrer"
           className="block"
         >
-          <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
+          <h3 className="text-base font-bold content-card-title mb-2 line-clamp-2 transition-colors">
             {content.title}
           </h3>
         </a>
 
         {/* Description */}
         {content.description && (
-          <p className="text-gray-600 text-sm line-clamp-2">
+          <p className="content-card-text text-sm line-clamp-2">
             {content.description}
           </p>
         )}

@@ -122,7 +122,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div>
       <Header />
       <HeroSection />
       
@@ -133,8 +133,8 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
         {data && data.content.length > 0 && (
           <section className="mb-12">
             <div className="mb-6">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Featured Content</h2>
-              <p className="text-gray-600 dark:text-gray-400 mt-1">Hand-picked fantasy football insights and analysis</p>
+              <h2 className="text-3xl font-bold content-title">Featured Content</h2>
+              <p className="content-text mt-1">Hand-picked fantasy football insights and analysis</p>
             </div>
 
             <FeaturedCarousel content={data.content} />
@@ -144,8 +144,8 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
         {/* Latest Fantasy Content Section */}
         <section>
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Latest Fantasy Content</h2>
-            <p className="text-gray-600 dark:text-gray-400">
+            <h2 className="text-3xl font-bold content-title mb-2">Latest Fantasy Content</h2>
+            <p className="content-text">
               Stay ahead of the game with fresh fantasy football content from top creators, analysts, and news sources. Updated daily with the latest insights, rankings, and strategies.
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
           {/* Results Info */}
           {data && (
             <div className="flex items-center justify-between mb-6">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm content-text">
                 Showing {data.content.length} of {data.pagination.total} items
               </p>
             </div>
@@ -170,7 +170,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
           {loading && !data && (
             <div className="flex justify-center items-center py-12">
               <div className="w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
-              <span className="ml-2 text-gray-600 dark:text-gray-400">Loading content...</span>
+              <span className="ml-2 loading-text">Loading content...</span>
             </div>
           )}
 
@@ -185,8 +185,8 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
                 </div>
               ) : (
                 <div className="text-center py-12">
-                  <p className="text-gray-500 dark:text-gray-400 text-lg">No content found matching your criteria.</p>
-                  <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">
+                  <p className="no-content-text text-lg">No content found matching your criteria.</p>
+                  <p className="no-content-subtext text-sm mt-2">
                     Try adjusting your filters or refresh the content.
                   </p>
                 </div>
