@@ -5,6 +5,12 @@
     }
   },
   "github": {
-    "autoJobCancelation": true
+    "autoJobCancelation": true,
+    "silent": true
+  },
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 10
+    }
   }
 }

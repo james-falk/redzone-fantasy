@@ -60,8 +60,12 @@ export class YouTubeIngestionModule extends BaseIngestionModule {
 
   protected async fetchData(): Promise<ContentCard[]> {
     try {
-      const channelId = this.sourceConfig.config.channelId;
-      const maxResults = this.sourceConfig.config.maxResults || 10;
+      const channelId = this.sourceConfig.config.channelId as string;
+      if (!channelId || typeof channelId !== 'string') {
+        throw new Error('Channel ID is required and must be a string');
+      }
+      
+      const maxResults = (this.sourceConfig.config.maxResults as number) || 10;
       
       logger.info(`Fetching YouTube videos for channel: ${channelId}`, { 
         sourceId: this.sourceConfig.id,
