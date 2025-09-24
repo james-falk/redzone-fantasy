@@ -118,7 +118,10 @@ export interface SourceConfig {
   name: string;
   type: ContentTypeEnum;
   enabled: boolean;
-  config: Record<string, unknown>; // Flexible config for different source types
+  url: string;
+  updateInterval: number; // Update interval in minutes
+  channelId?: string; // YouTube channel ID (for YouTube sources)
+  config?: Record<string, unknown>; // Flexible config for different source types
 }
 
 // Ingestion result types
