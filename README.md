@@ -275,15 +275,47 @@ The application is prepared for Clerk authentication:
 
 ### Scheduled Ingestion
 
-Set up scheduled ingestion using:
-- Vercel Cron Jobs
-- GitHub Actions
-- External cron services
+The application includes built-in scheduled ingestion that automatically refreshes content daily.
 
-Example cron job (every 30 minutes):
-```bash
-0,30 * * * * /usr/bin/node /path/to/scripts/ingest.js
+#### Vercel Cron Jobs (Recommended)
+
+The project is configured with Vercel Cron Jobs in `vercel.json`:
+
+```json
+{
+  "crons": [
+    {
+      "path": "/api/cron/ingest",
+      "schedule": "0 22 * * *"
+    }
+  ]
+}
 ```
+
+**Setup:**
+1. Add `CRON_SECRET` environment variable in Vercel dashboard
+2. Deploy to Vercel - cron jobs will automatically start running
+3. Monitor logs in Vercel dashboard or check `/logs/combined.log`
+
+**Schedule:** Daily at 6:00 PM EST (22:00 UTC)  
+**Note:** Vercel Hobby accounts are limited to daily cron jobs. Upgrade to Pro for more frequent runs.
+
+#### Testing Locally
+
+```bash
+# Test the cron endpoint
+npm run test-cron
+
+# Manual ingestion (alternative)
+npm run ingest
+```
+
+#### Alternative Cron Solutions
+
+For non-Vercel deployments:
+- **GitHub Actions**: Use workflow with `schedule` trigger
+- **External cron services**: Call `POST /api/cron/ingest` with `Authorization: Bearer ${CRON_SECRET}`
+- **System cron**: Use `curl` to call the endpoint
 
 ### Additional Features
 

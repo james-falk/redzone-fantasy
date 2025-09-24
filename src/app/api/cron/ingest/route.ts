@@ -5,11 +5,11 @@ import { logger } from '@/lib/logger';
 /**
  * Scheduled Content Ingestion Endpoint
  * 
- * This endpoint is called by Vercel Cron Jobs every 2 hours to automatically
+ * This endpoint is called by Vercel Cron Jobs daily at 6:00 PM EST to automatically
  * refresh content from all configured sources.
  * 
- * Cron Schedule: "0 */2 * * *" (every 2 hours at minute 0)
- * - 00:00, 02:00, 04:00, 06:00, 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00, 22:00
+ * Cron Schedule: "0 22 * * *" (daily at 6:00 PM EST / 10:00 PM UTC)
+ * Note: Vercel Hobby accounts are limited to daily cron jobs
  */
 export async function GET(request: NextRequest) {
   try {
@@ -39,9 +39,10 @@ export async function GET(request: NextRequest) {
     }
 
     const startTime = Date.now();
-    logger.info('🕐 Scheduled ingestion started', {
+    logger.info('🕐 Daily scheduled ingestion started', {
       timestamp: new Date().toISOString(),
-      trigger: 'cron-job',
+      trigger: 'daily-cron-job',
+      schedule: '6:00 PM EST daily',
     });
 
     // Run ingestion for all sources
@@ -68,26 +69,27 @@ export async function GET(request: NextRequest) {
     }));
 
     // Log comprehensive results
-    logger.info('✅ Scheduled ingestion completed', {
+    logger.info('✅ Daily scheduled ingestion completed', {
       ...summary,
       timestamp: new Date().toISOString(),
-      nextRun: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString(), // Next run in 2 hours
+      nextRun: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(), // Next run in 24 hours
       sourceBreakdown,
     });
 
     // Log a human-readable summary
-    logger.info(`📊 Cron Summary: ${summary.totalSaved} new items saved from ${summary.successful}/${summary.totalSources} sources in ${summary.durationMinutes} minutes`, {
+    logger.info(`📊 Daily Cron Summary: ${summary.totalSaved} new items saved from ${summary.successful}/${summary.totalSources} sources in ${summary.durationMinutes} minutes`, {
       newArticles: summary.totalSaved,
       successfulSources: summary.successful,
       totalSources: summary.totalSources,
       duration: summary.durationMinutes,
       timestamp: new Date().toISOString(),
+      schedule: 'Daily at 6:00 PM EST',
     });
 
     // Log any failures
     const failures = results.filter(r => !r.success);
     if (failures.length > 0) {
-      logger.warn('⚠️ Some sources failed during scheduled ingestion', {
+      logger.warn('⚠️ Some sources failed during daily scheduled ingestion', {
         failures: failures.map(f => ({
           sourceId: f.sourceId,
           errors: f.errors,
@@ -97,17 +99,18 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: `Scheduled ingestion completed: ${summary.totalSaved} new items from ${summary.successful}/${summary.totalSources} sources`,
+      message: `Daily scheduled ingestion completed: ${summary.totalSaved} new items from ${summary.successful}/${summary.totalSources} sources`,
       summary,
       sourceBreakdown,
       results,
       timestamp: new Date().toISOString(),
-      nextScheduledRun: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString(),
+      nextScheduledRun: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      schedule: 'Daily at 6:00 PM EST',
     });
 
   } catch (error) {
     const errorMessage = (error as Error).message;
-    logger.error('❌ Scheduled ingestion failed', {
+    logger.error('❌ Daily scheduled ingestion failed', {
       error: errorMessage,
       stack: (error as Error).stack,
       timestamp: new Date().toISOString(),
@@ -116,7 +119,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        error: 'Scheduled ingestion failed',
+        error: 'Daily scheduled ingestion failed',
         message: errorMessage,
         timestamp: new Date().toISOString(),
       },
@@ -131,7 +134,7 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
-    logger.info('🔧 Manual cron ingestion triggered', {
+    logger.info('🔧 Manual daily cron ingestion triggered', {
       timestamp: new Date().toISOString(),
       trigger: 'manual-api-call',
     });
@@ -141,12 +144,12 @@ export async function POST(request: NextRequest) {
     return response;
 
   } catch (error) {
-    logger.error('Manual cron ingestion failed', { error: (error as Error).message });
+    logger.error('Manual daily cron ingestion failed', { error: (error as Error).message });
     
     return NextResponse.json(
       { 
         success: false,
-        error: 'Manual cron ingestion failed',
+        error: 'Manual daily cron ingestion failed',
         message: (error as Error).message,
       },
       { status: 500 }
