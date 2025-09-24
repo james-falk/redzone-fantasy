@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
     
     if (authHeader !== expectedAuth) {
       logger.warn('Unauthorized cron request attempt', {
-        ip: request.ip,
+        ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown',
         userAgent: request.headers.get('user-agent'),
         authProvided: !!authHeader,
       });
