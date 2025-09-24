@@ -88,6 +88,13 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
   }
 
   const currentArticle = featuredContent[currentIndex];
+  
+  // Defensive check to ensure current article exists
+  if (!currentArticle) {
+    console.warn('FeaturedCarousel: currentArticle is undefined');
+    return null;
+  }
+  
   const imageUrl = getBestImage(currentArticle.thumbnailUrl, currentArticle.sourceName);
 
   return (
@@ -188,6 +195,11 @@ export default function FeaturedCarousel({ content }: FeaturedCarouselProps) {
       <div className="featured-thumbnail-strip p-4">
         <div className="flex space-x-4 overflow-x-auto">
           {featuredContent.map((article, index) => {
+            // Skip if article is undefined
+            if (!article) {
+              console.warn(`FeaturedCarousel: article at index ${index} is undefined`);
+              return null;
+            }
             const thumbImageUrl = getBestImage(article.thumbnailUrl, article.sourceName);
             return (
               <button

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "ingest": "npx tsx scripts/ingest.ts",
-    "wipe-db": "npx tsx scripts/wipe-db.ts"
+    "wipe-db": "npx tsx scripts/wipe-db.ts",
+    "test-cron": "npx tsx scripts/test-cron.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.6",

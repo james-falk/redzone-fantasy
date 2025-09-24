@@ -137,9 +137,11 @@ export default function SourcePage({ sourceName, slug }: SourcePageProps) {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                  {data.content.map((content) => (
-                    <ContentCardComponent key={content.id} content={content} />
-                  ))}
+                  {data.content
+                    .filter((content) => content != null) // Filter out null/undefined items
+                    .map((content) => (
+                      <ContentCardComponent key={content.id} content={content} />
+                    ))}
                 </div>
               </>
             ) : (

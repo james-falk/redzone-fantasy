@@ -66,6 +66,12 @@ const getSimplifiedSourceName = (sourceName: string) => {
 };
 
 export default function ContentCardComponent({ content, featured = false }: ContentCardProps) {
+  // Defensive check to ensure content exists
+  if (!content) {
+    console.warn('ContentCardComponent received undefined content');
+    return null;
+  }
+
   const formatDate = (dateString: string) => {
     try {
       const publishedDate = new Date(dateString);

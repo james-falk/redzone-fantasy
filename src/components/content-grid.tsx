@@ -108,40 +108,6 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
     }
   }, [filters, currentPage, fetchContent, initialData]);
 
-  // Set up automatic background refresh
-  useEffect(() => {
-    // Set up interval for background refresh every 2 hours (7200000ms)
-    const REFRESH_INTERVAL = 2 * 60 * 60 * 1000; // 2 hours
-    
-    // For testing purposes, you can temporarily use a shorter interval:
-    // const REFRESH_INTERVAL = 30 * 1000; // 30 seconds (for testing only)
-    
-    console.log('🔄 Background refresh system initialized');
-    console.log(`⏰ Refresh interval set to: ${REFRESH_INTERVAL / 1000 / 60} minutes (${REFRESH_INTERVAL / 1000 / 60 / 60} hours)`);
-    console.log(`📅 Next refresh scheduled for: ${new Date(Date.now() + REFRESH_INTERVAL).toLocaleString()}`);
-    
-    const interval = setInterval(() => {
-      const now = new Date();
-      console.log(`🔍 Background refresh check at ${now.toLocaleTimeString()}`);
-      console.log(`📊 Current state - Page: ${currentPage}, Filters: ${Object.keys(filters).length > 0 ? JSON.stringify(filters) : 'none'}`);
-      
-      // Only do background refresh if we're on the first page with no filters
-      // This prevents disrupting user's current view
-      if (currentPage === 1 && Object.keys(filters).length === 0) {
-        console.log('✅ Conditions met - Starting background refresh...');
-        fetchContent(true);
-      } else {
-        console.log('⏸️ Background refresh skipped - User is browsing filtered/paginated content');
-        console.log(`📅 Next refresh attempt: ${new Date(Date.now() + REFRESH_INTERVAL).toLocaleTimeString()}`);
-      }
-    }, REFRESH_INTERVAL);
-
-    // Cleanup interval on unmount
-    return () => {
-      console.log('🛑 Background refresh system cleaned up');
-      clearInterval(interval);
-    };
-  }, [currentPage, filters, fetchContent]);
 
   const handleFiltersChange = (newFilters: ContentFilters) => {
     setFilters(newFilters);
@@ -196,7 +162,7 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
               <p className="content-text mt-1">Hand-picked fantasy football insights and analysis</p>
             </div>
 
-            <FeaturedCarousel content={data.content} />
+            <FeaturedCarousel content={data.content.filter((content) => content != null)} />
           </section>
         )}
 
@@ -238,9 +204,11 @@ export default function ContentGrid({ initialData }: ContentGridProps) {
             <>
               {data.content.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                  {data.content.map((content) => (
-                    <ContentCardComponent key={content.id} content={content} />
-                  ))}
+                  {data.content
+                    .filter((content) => content != null) // Filter out null/undefined items
+                    .map((content) => (
+                      <ContentCardComponent key={content.id} content={content} />
+                    ))}
                 </div>
               ) : (
                 <div className="text-center py-12">

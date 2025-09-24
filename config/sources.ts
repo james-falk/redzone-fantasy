@@ -129,6 +129,28 @@ export const dataSources: SourceConfig[] = [
       updateInterval: 60,
     },
   },
+  {
+    id: 'dynasty-league-football-youtube',
+    name: 'Dynasty League Football',
+    type: 'video',
+    enabled: true,
+    config: {
+      channelId: 'UC191P5Dpx4FxYhCSEv1KE6g', // Dynasty League Football YouTube Channel
+      maxResults: 50,
+      updateInterval: 60,
+    },
+  },
+  {
+    id: 'flock-fantasy-youtube',
+    name: 'Flock Fantasy',
+    type: 'video',
+    enabled: true,
+    config: {
+      channelId: 'UC3jkBCIA687DNpQOZFSbtsg', // Flock Fantasy YouTube Channel
+      maxResults: 50,
+      updateInterval: 60,
+    },
+  },
 ];
 
 // Helper functions for source management
