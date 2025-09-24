@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
         minute: '2-digit',
         timeZoneName: 'short'
       }),
-      recentLogs: [] as any[],
+      recentLogs: [] as Array<Record<string, unknown>>,
       timestamp: new Date().toISOString(),
     };
 

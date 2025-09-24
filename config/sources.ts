@@ -122,3 +122,22 @@ export function getSourcesByType(type: 'article' | 'video' | 'podcast'): SourceC
 export function getSourceById(id: string): SourceConfig | undefined {
   return dataSources.find(source => source.id === id);
 }
+
+/**
+ * Validate required environment variables
+ */
+export function validateEnvironmentVariables(): { valid: boolean; missing: string[] } {
+  const required = ['MONGODB_URI'];
+  const missing: string[] = [];
+
+  for (const envVar of required) {
+    if (!process.env[envVar]) {
+      missing.push(envVar);
+    }
+  }
+
+  return {
+    valid: missing.length === 0,
+    missing,
+  };
+}
