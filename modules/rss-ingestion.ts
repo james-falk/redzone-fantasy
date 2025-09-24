@@ -34,7 +34,7 @@ export class RSSIngestionModule extends BaseIngestionModule {
   protected validateConfig(): void {
     super.validateConfig();
     
-    if (!this.sourceConfig.config.rssUrl) {
+    if (!this.sourceConfig.url) {
       throw new IngestionError(
         'RSS URL is required in source configuration',
         this.sourceConfig.id
@@ -44,7 +44,7 @@ export class RSSIngestionModule extends BaseIngestionModule {
 
   protected async fetchData(): Promise<ContentCard[]> {
     try {
-      const rssUrl = this.sourceConfig.config.rssUrl as string;
+      const rssUrl = this.sourceConfig.url;
       if (!rssUrl || typeof rssUrl !== 'string') {
         throw new Error('RSS URL is required and must be a string');
       }

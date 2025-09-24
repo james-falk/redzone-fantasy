@@ -50,7 +50,7 @@ export class YouTubeIngestionModule extends BaseIngestionModule {
   protected validateConfig(): void {
     super.validateConfig();
     
-    if (!this.sourceConfig.config.channelId) {
+    if (!this.sourceConfig.channelId) {
       throw new IngestionError(
         'Channel ID is required in source configuration',
         this.sourceConfig.id
@@ -60,12 +60,12 @@ export class YouTubeIngestionModule extends BaseIngestionModule {
 
   protected async fetchData(): Promise<ContentCard[]> {
     try {
-      const channelId = this.sourceConfig.config.channelId as string;
+      const channelId = this.sourceConfig.channelId;
       if (!channelId || typeof channelId !== 'string') {
         throw new Error('Channel ID is required and must be a string');
       }
       
-      const maxResults = (this.sourceConfig.config.maxResults as number) || 10;
+      const maxResults = 10; // Default to 10 videos per channel
       
       logger.info(`Fetching YouTube videos for channel: ${channelId}`, { 
         sourceId: this.sourceConfig.id,
