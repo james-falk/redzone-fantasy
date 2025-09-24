@@ -72,7 +72,7 @@ async function wipeDatabase() {
     process.exit(1);
   } finally {
     // Close database connection
-    await database.close();
+    await database.disconnect();
     console.log('🔌 Database connection closed');
   }
 }
